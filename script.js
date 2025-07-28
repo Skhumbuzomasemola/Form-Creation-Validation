@@ -9,7 +9,7 @@ form.addEventListener('submit', function(event) {
     const feedbackDiv = document.getElementById("form-feedback")
     const usernameInput = document.getElementById('username').value.trim();
     const usernameError = document.getElementById('usernameError');
-   Username Validation (no direct use of username.length)
+   //Username Validation (no direct use of username.length)
     if (username === "" || username.split("").length < 3) {
       usernameError.textContent = "Username must be at least 3 characters long.";
       isValid = false;
@@ -26,13 +26,11 @@ if (!email.includes("@") || !email.includes(".")) {
 
     const passwordInput = document.getElementById('password').value.trim();
     const passwordError = document.getElementById('passwordError');
-    if (passwordInput.length < 8) {
-        passwordError.textContent = 'Password must be  at least 8 characters long.';
-        return;
-    } else {
-        passwordError.textContent = '';
+  // Password Validation (no direct use of password.length if required)
+    if (password === "" || password.split("").length < 8) {
+      passwordError.textContent = "Password must be at least 8 characters long.";
+      isValid = false;
     }
-
     const feedbackDiv = document.getElementById("feedback");
 feedbackDiv.style.display = "block";
 
