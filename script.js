@@ -9,7 +9,7 @@ form.addEventListener('submit', function(event) {
     const feedbackDiv = document.getElementById("form-feedback")
     const usernameInput = document.getElementById('username').value.trim();
     const usernameError = document.getElementById('usernameError');
-    if (usernameInput.value.length < 3) {
+   if (username.trim().length < 3) {
         usernameError.textContent = 'Username must be at least 3 characters long.';
         return;
       } else {
