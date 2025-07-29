@@ -22,10 +22,9 @@ users.forEach(user => {
 dataContainer.appendChild(userList); 
 
 
-  } catch (error) {
-    // Handle any errors
-    dataContainer.textContent = "Error fetching user data.";
-    console.error("Fetch error:", error);
-  }
+ catch (error) {
+  dataContainer.innerHTML = '';
+  dataContainer.textContent = 'Failed to load user data.';
+}
 }
 document.addEventListener('DOMContentLoaded', fetchUserData);
