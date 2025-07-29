@@ -9,7 +9,7 @@ const dataContainer = document.getElementById('api-data');
     }
 
     const users = await response.json();
-
+ dataContainer.innerHTML = '';
    
 const userList = document.createElement('ul');
 
