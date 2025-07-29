@@ -10,9 +10,17 @@ const dataContainer = document.getElementById('api-data');
 
     const users = await response.json();
 
-    dataContainer.innerHTML = "<ul>" +
-      users.map(user => `<li>${user.name}</li>`).join('') +
-      "</ul>";
+   
+const userList = document.createElement('ul');
+
+users.forEach(user => {
+  const listItem = document.createElement('li');
+  listItem.textContent = user.name;
+  userList.appendChild(listItem); 
+});
+
+dataContainer.appendChild(userList); 
+
 
   } catch (error) {
     // Handle any errors
